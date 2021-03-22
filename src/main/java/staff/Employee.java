@@ -29,7 +29,9 @@ public class Employee {
     }
 
     public void raiseSalary(Double increaseAmount){
-        setSalary(this.salary + increaseAmount);
+        if(increaseAmount > 0) {
+            setSalary(this.salary + increaseAmount);
+        }
     }
 
     public double payBonus(){
