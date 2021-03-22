@@ -6,6 +6,12 @@ public class Employee {
     public String nationalInsuranceNumber;
     public double salary;
 
+    public Employee(String name, String nationalInsuranceNumber, double salary){
+        this.name = name;
+        this.nationalInsuranceNumber = nationalInsuranceNumber;
+        this.salary = salary;
+    }
+
     public String getName() {
         return name;
     }
