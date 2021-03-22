@@ -45,6 +45,12 @@ public class DirectorTest {
     }
 
     @Test
+    public void cannotRaiseSalaryWithNegativeAmount(){
+        director.raiseSalary(-200.00);
+        assertEquals(40000.00, director.getSalary(), 0.01);
+    }
+
+    @Test
     public void canGetBonusAmount(){
         assertEquals(400.00, director.payBonus(), 0.01);
     }
