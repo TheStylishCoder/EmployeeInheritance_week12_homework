@@ -19,6 +19,18 @@ public class DirectorTest {
     }
 
     @Test
+    public void canChangeName(){
+        director.setName("Jim");
+        assertEquals("Jim", director.getName());
+    }
+
+    @Test
+    public void cannotChangeNameToNull(){
+        director.setName(null);
+        assertEquals("Dwight", director.getName());
+    }
+
+    @Test
     public void hasNationalInsuranceNumber(){
         assertEquals("SF626B33T", director.getNationalInsuranceNumber());
     }

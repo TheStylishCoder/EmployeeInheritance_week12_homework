@@ -19,6 +19,18 @@ public class DatabaseAdminTest {
     }
 
     @Test
+    public void canChangeName(){
+        databaseAdmin.setName("Pam");
+        assertEquals("Pam", databaseAdmin.getName());
+    }
+
+    @Test
+    public void cannotChangeNameToNull(){
+        databaseAdmin.setName(null);
+        assertEquals("Erin", databaseAdmin.getName());
+    }
+
+    @Test
     public void hasNationalInsuranceNumber(){
         assertEquals("LK989C00L", databaseAdmin.getNationalInsuranceNumber());
     }
